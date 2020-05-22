@@ -10,7 +10,7 @@
     "server": "nodemon server.js --ignore client",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION = false"
+    "heroku-postbuild": "cd client && NPM_CONFIG_PRODUCTION=false npm install && npm run build "
   },
   "author": "Ishan Shanware",
   "license": "MIT",
